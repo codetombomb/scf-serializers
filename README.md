@@ -47,7 +47,8 @@ def index
 end
 ```
 
-## Serializing the Alley Cat app data:
+## Serializing the Alley Cat app data
+[Alley Cat Antiques ERD](https://drive.google.com/file/d/1JYWBbN5QuhdJqAk9vZFBVS4q204o4umU/view?usp=sharing)
 
 ### Category
 

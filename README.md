@@ -1,4 +1,6 @@
 
+# 11-5 Rails Serializers
+
 ### What is serialization?
 
 ActiveModel::Serializer, or AMS, provides a convention-based approach to serializing resources or shaping our data to fit our needs.

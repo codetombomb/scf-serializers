@@ -58,6 +58,139 @@ end
     - Define a method `#status` that will return 'sold' if self.sold returns true and 'Buy Now' if false.
     - Return the items `seller` with username and email included.
 
+```json
+// 20221105022549
+// http://localhost:3000/categories
+
+[
+  {
+    "id": 1,
+    "name": "fishing",
+    "items": [
+      {
+        "id": 1,
+        "name": "fishing pole",
+        "desc": "really cool fishing pole!",
+        "price": "$10.00",
+        "status": "Buy Now"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "camping",
+    "items": [
+      {
+        "id": 1,
+        "name": "fishing pole",
+        "desc": "really cool fishing pole!",
+        "price": "$10.00",
+        "status": "Buy Now"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "womens clothing",
+    "items": [
+      {
+        "id": 2,
+        "name": "white t",
+        "desc": "get hip with this cool shirt",
+        "price": "$5.00",
+        "status": "Buy Now"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "mens clothing",
+    "items": [
+      {
+        "id": 2,
+        "name": "white t",
+        "desc": "get hip with this cool shirt",
+        "price": "$5.00",
+        "status": "Buy Now"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "electronics",
+    "items": [
+      {
+        "id": 5,
+        "name": "vintage walkman",
+        "desc": "go back in time with this music player",
+        "price": "$5.25",
+        "status": "Buy Now"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "decor",
+    "items": [
+      {
+        "id": 3,
+        "name": "gold round mirror",
+        "desc": "vintage mirror",
+        "price": "$30.50",
+        "status": "Buy Now"
+      },
+      {
+        "id": 4,
+        "name": "marble table lamp",
+        "desc": "really cool marble lamp",
+        "price": "$27.50",
+        "status": "Buy Now"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "home",
+    "items": [
+      {
+        "id": 3,
+        "name": "gold round mirror",
+        "desc": "vintage mirror",
+        "price": "$30.50",
+        "status": "Buy Now"
+      },
+      {
+        "id": 4,
+        "name": "marble table lamp",
+        "desc": "really cool marble lamp",
+        "price": "$27.50",
+        "status": "Buy Now"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "living room",
+    "items": [
+      {
+        "id": 3,
+        "name": "gold round mirror",
+        "desc": "vintage mirror",
+        "price": "$30.50",
+        "status": "Buy Now"
+      },
+      {
+        "id": 4,
+        "name": "marble table lamp",
+        "desc": "really cool marble lamp",
+        "price": "$27.50",
+        "status": "Buy Now"
+      }
+    ]
+  }
+]
+```
+
 ---
 
 ### Item
@@ -68,6 +201,127 @@ end
 - Return the items `seller` with username and email included.
 - Each item should also return a list of associated `categories` including the name
 
+```json
+
+[
+  {
+    "id": 1,
+    "name": "fishing pole",
+    "desc": "really cool fishing pole!",
+    "price": "$10.00",
+    "status": "Buy Now",
+    "seller": {
+      "id": 1,
+      "username": "codetombomb",
+      "email": "codetombomb@gmail.com"
+    },
+    "categories": [
+      {
+        "id": 1,
+        "name": "fishing"
+      },
+      {
+        "id": 2,
+        "name": "camping"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "white t",
+    "desc": "get hip with this cool shirt",
+    "price": "$5.00",
+    "status": "Buy Now",
+    "seller": {
+      "id": 1,
+      "username": "codetombomb",
+      "email": "codetombomb@gmail.com"
+    },
+    "categories": [
+      {
+        "id": 3,
+        "name": "womens clothing"
+      },
+      {
+        "id": 4,
+        "name": "mens clothing"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "gold round mirror",
+    "desc": "vintage mirror",
+    "price": "$30.50",
+    "status": "Buy Now",
+    "seller": {
+      "id": 2,
+      "username": "eriiscool",
+      "email": "eriiscool@gmail.com"
+    },
+    "categories": [
+      {
+        "id": 6,
+        "name": "decor"
+      },
+      {
+        "id": 7,
+        "name": "home"
+      },
+      {
+        "id": 8,
+        "name": "living room"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "marble table lamp",
+    "desc": "really cool marble lamp",
+    "price": "$27.50",
+    "status": "Buy Now",
+    "seller": {
+      "id": 2,
+      "username": "eriiscool",
+      "email": "eriiscool@gmail.com"
+    },
+    "categories": [
+      {
+        "id": 6,
+        "name": "decor"
+      },
+      {
+        "id": 8,
+        "name": "living room"
+      },
+      {
+        "id": 7,
+        "name": "home"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "vintage walkman",
+    "desc": "go back in time with this music player",
+    "price": "$5.25",
+    "status": "Buy Now",
+    "seller": {
+      "id": 2,
+      "username": "eriiscool",
+      "email": "eriiscool@gmail.com"
+    },
+    "categories": [
+      {
+        "id": 5,
+        "name": "electronics"
+      }
+    ]
+  }
+]
+
+```
+
 ---
 
 ### User
@@ -77,3 +331,129 @@ Reminder that user can behave as either a seller and/or buyer. When a request to
 - Serialize with `username` and `email`
 - Return a list of both sold_items and purchased_items. These lists should be returned as separate collections.
 - Return a list of the categories as `sold_categories` and `purchased_categories`, with only the category `name` included.
+
+
+```json
+
+[
+  {
+    "id": 1,
+    "username": "codetombomb",
+    "email": "codetombomb@gmail.com",
+    "purchased_items": [
+      {
+        "id": 5,
+        "name": "vintage walkman",
+        "desc": "go back in time with this music player",
+        "price": "$5.25",
+        "status": "Buy Now"
+      }
+    ],
+    "sold_items": [
+      {
+        "id": 1,
+        "name": "fishing pole",
+        "desc": "really cool fishing pole!",
+        "price": "$10.00",
+        "status": "Buy Now"
+      },
+      {
+        "id": 2,
+        "name": "white t",
+        "desc": "get hip with this cool shirt",
+        "price": "$5.00",
+        "status": "Buy Now"
+      }
+    ],
+    "sold_categories": [
+      {
+        "id": 1,
+        "name": "fishing"
+      },
+      {
+        "id": 2,
+        "name": "camping"
+      },
+      {
+        "id": 3,
+        "name": "womens clothing"
+      },
+      {
+        "id": 4,
+        "name": "mens clothing"
+      }
+    ],
+    "purchased_categories": [
+      {
+        "id": 5,
+        "name": "electronics"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "username": "eriiscool",
+    "email": "eriiscool@gmail.com",
+    "purchased_items": [
+      
+    ],
+    "sold_items": [
+      {
+        "id": 3,
+        "name": "gold round mirror",
+        "desc": "vintage mirror",
+        "price": "$30.50",
+        "status": "Buy Now"
+      },
+      {
+        "id": 4,
+        "name": "marble table lamp",
+        "desc": "really cool marble lamp",
+        "price": "$27.50",
+        "status": "Buy Now"
+      },
+      {
+        "id": 5,
+        "name": "vintage walkman",
+        "desc": "go back in time with this music player",
+        "price": "$5.25",
+        "status": "Buy Now"
+      }
+    ],
+    "sold_categories": [
+      {
+        "id": 6,
+        "name": "decor"
+      },
+      {
+        "id": 7,
+        "name": "home"
+      },
+      {
+        "id": 8,
+        "name": "living room"
+      },
+      {
+        "id": 6,
+        "name": "decor"
+      },
+      {
+        "id": 8,
+        "name": "living room"
+      },
+      {
+        "id": 7,
+        "name": "home"
+      },
+      {
+        "id": 5,
+        "name": "electronics"
+      }
+    ],
+    "purchased_categories": [
+      
+    ]
+  }
+]
+```
+

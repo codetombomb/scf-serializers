@@ -59,8 +59,6 @@ end
     - Return the items `seller` with username and email included.
 
 ```json
-// 20221105022549
-// http://localhost:3000/categories
 
 [
   {

@@ -28,3 +28,7 @@ group :development do
   # gem "spring"
 end
 
+
+gem "pry", "~> 0.14.1"
+
+gem "active_model_serializers", "~> 0.10.13"

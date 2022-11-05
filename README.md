@@ -24,7 +24,7 @@ gem 'active_model_serializers'
 
 - And then run `bundle install`
 - or run:
-    - `bundle add active_model_serializer`
+    - `bundle add active_model_serializers`
 - To generate a new serializer, run serializer generator:
 
 ```bash

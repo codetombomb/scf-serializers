@@ -2,12 +2,11 @@
 
 ### What is serialization?
 
-"Serialization is the process of translating data structures or objects into a format that can be stored or transmitted and reconstructed later."
-source: https://medium.com/@stvik2/serializing-data-in-rails-a46cb16e0c2d
+ActiveModel::Serializer, or AMS, provides a convention-based approach to serializing resources or shaping our data.
 
 ### How have we been serializing up to this point?
 
-- Using the render JSON and passing any options to the `to_json` method to customize data or include data associations.
+- In Rails controllers, we have been using `render json:` and in Sinatra, we used the `to_json` method and passed any options to customize data or include data associations.
 
 ### When to use AMS over controller serialization?
 
@@ -21,6 +20,12 @@ source: https://medium.com/@stvik2/serializing-data-in-rails-a46cb16e0c2d
 ```rb
 gem 'active_model_serializers'
 ```
+
+And then run `bundle install` 
+
+or run:
+
+`bundle add active_model_serializer`
 
 - To generate a new serializer, run serializer generator:
 
@@ -44,7 +49,7 @@ def index
   render json: categories, each_serializer: CustomSerializer
 end
 
-## Serializing the Marketplace app data:
+## Serializing the Alley Cat app data:
 
 ### Category
 
@@ -141,8 +146,8 @@ What does the expected data structure look like when we visit:
   "status": "Buy Now",
   "seller": {
     "id": 1,
-    "username": "aisayo",
-    "email": "aisayo@123.com"
+    "username": "codetombomb",
+    "email": "codetombomb@gmail.com"
   },
   "categories": [
     {
@@ -218,8 +223,8 @@ What does the expected data structure look like when we visit:
 
 ```json
 {
-  "username": "aisayo",
-  "email": "aisayo@123.com",
+  "username": "codetomomb",
+  "email": "codetombomb@gmail.com",
   "sold_items": [
     {
       "name": "fishing pole",
